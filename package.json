@@ -4,7 +4,7 @@
   "description": "A simple drag and drop grid manager",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode development",
+    "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "deploy": "node scripts/deploy.js",
     "test": "echo \"Error: no test specified\" && exit 1"

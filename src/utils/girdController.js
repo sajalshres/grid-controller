@@ -43,8 +43,9 @@ const gridController = {
   },
 
   onDragEnter(element, event) {
-    event.preventDefault();
-    console.log({ element: element, event: event.srcElement });
+    if (event.preventDefault) {
+      event.preventDefault();
+    }
     event.target.classList.add(this.ui.dragEnter);
   },
 
@@ -53,7 +54,9 @@ const gridController = {
   },
 
   onDragOver(element, event) {
-    event.preventDefault();
+    if (event.preventDefault) {
+      event.preventDefault();
+    }
     event.dataTransfer.dropEffect = "move";
     return false;
   },
